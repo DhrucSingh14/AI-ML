@@ -33,8 +33,8 @@ def get_movie_recommendations(movie_title, movies_df, cosine_sim, top_n=5):
     
    
     sim_scores = sim_scores[1:top_n + 1]  
-    
-    # Get the movie titles based on similarity scores
+
+   
     recommended_movies = [movies_df['title'][i[0]] for i in sim_scores]
     
     return recommended_movies
